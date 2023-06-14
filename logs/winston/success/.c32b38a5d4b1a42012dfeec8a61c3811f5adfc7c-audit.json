@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/delwar/NextLevel/university-management/logs/winston/success/.c32b38a5d4b1a42012dfeec8a61c3811f5adfc7c-audit.json",
+    "files": [
+        {
+            "date": 1686766142252,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/success/phu-2023-06-15-00-success.log",
+            "hash": "f47a0ce55950700f2fe0f77e802148fd4ab13158243101daedb2c2dd4cd2c7e7"
+        }
+    ],
+    "hashType": "sha256"
+}
