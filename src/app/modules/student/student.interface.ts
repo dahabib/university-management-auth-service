@@ -1,4 +1,4 @@
-import { Model, Schema } from 'mongoose'
+import { Model, Types } from 'mongoose'
 import { IAcademicSemester } from '../academicSemester/academicSemester.interface'
 import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interface'
 import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interface'
@@ -43,9 +43,9 @@ export type IStudent = {
   bloodGroup?: BloodGroup
   guardian: Guardian
   localGuardian: LocalGuardian
-  academicSemester: Schema.Types.ObjectId | IAcademicSemester
-  academicDepartment: Schema.Types.ObjectId | IAcademicDepartment
-  academicFaculty: Schema.Types.ObjectId | IAcademicFaculty
+  academicSemester: Types.ObjectId | IAcademicSemester
+  academicDepartment: Types.ObjectId | IAcademicDepartment
+  academicFaculty: Types.ObjectId | IAcademicFaculty
   profileImage?: string
 }
 

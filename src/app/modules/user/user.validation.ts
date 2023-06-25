@@ -16,7 +16,7 @@ const createUserZodSchema = z.object({
       dateOfBirth: z.string({ required_error: 'Date of Birth is required !' }),
       email: z.string({ required_error: 'Email is required' }).email(),
       contactNo: z.string({ required_error: 'Contact Number is required !' }),
-      emargencyContact: z.string({
+      emergencyContactNo: z.string({
         required_error: 'Emergency contact number is required !',
       }),
       presentAddress: z.string({
@@ -78,7 +78,7 @@ const updateUserZodSchema = z.object({
       dateOfBirth: z.string().optional(),
       email: z.string().email().optional(),
       contactNo: z.string().optional(),
-      emargencyContact: z.string().optional(),
+      emergencyContactNo: z.string().optional(),
       presentAddress: z.string().optional(),
       permanentAddress: z.string().optional(),
       bloodGroup: z

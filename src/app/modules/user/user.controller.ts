@@ -27,7 +27,7 @@ const getUsers = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, userFilterableFields)
   const paginationOptions = pick(req.query, paginationFields)
 
-  const result = await UserSerice.getUsers(filters, paginationOptions)
+  const result = await UserService.getUsers(filters, paginationOptions)
   sendResponse<IUser[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -41,7 +41,7 @@ const getUsers = catchAsync(async (req: Request, res: Response) => {
 const getSingleUser = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params
 
-  const result = await UserSerice.getSingleUser(id)
+  const result = await UserService.getSingleUser(id)
 
   sendResponse<IUser>(res, {
     statusCode: httpStatus.OK,
@@ -56,7 +56,7 @@ const updateUser = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params
   const updatedData = req.body
 
-  const result = await UserSerice.updateUser(id, updatedData)
+  const result = await UserService.updateUser(id, updatedData)
 
   sendResponse<IUser>(res, {
     statusCode: httpStatus.OK,
@@ -71,7 +71,7 @@ const updateUser = catchAsync(async (req: Request, res: Response) => {
 const deleteUser = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params
 
-  const result = await UserSerice.deleteUser(id)
+  const result = await UserService.deleteUser(id)
 
   sendResponse<IUser>(res, {
     statusCode: httpStatus.OK,

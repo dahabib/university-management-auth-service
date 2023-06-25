@@ -67,9 +67,15 @@ const createStudent = async (
     newUserAllData = await User.findOne({ id: newUserAllData.id }).populate({
       path: 'student',
       populate: [
-        { path: 'academicSemester' },
-        { path: 'academicDepartment' },
-        { path: 'academicFaculty' },
+        {
+          path: 'academicSemester',
+        },
+        {
+          path: 'academicDepartment',
+        },
+        {
+          path: 'academicFaculty',
+        },
       ],
     })
   }

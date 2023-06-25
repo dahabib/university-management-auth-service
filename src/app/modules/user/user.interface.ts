@@ -6,7 +6,7 @@ export type IUser = {
   id: string | undefined
   role: IUserRole
   password: string
-  student?: Types.ObjectId
+  student?: Types.ObjectId | IStudent
 }
 
 export type IStudent = {

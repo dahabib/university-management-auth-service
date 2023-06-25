@@ -79,6 +79,16 @@
             "date": 1687723775378,
             "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-26-02-error.log",
             "hash": "542d7ec3771853b58f8465ced5db7fb48417832ad77e7cebdbdd6b43cb77169d"
+        },
+        {
+            "date": 1687732715890,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-26-04-error.log",
+            "hash": "2da5b114d0e8837126d0743f0fa3115c2e5c456a060400381e5ae8f07f3a5749"
+        },
+        {
+            "date": 1687734278164,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-26-05-error.log",
+            "hash": "b6cd7135f2a89fa7c6e0a4df61de34b0b563925e1cabf634e260d7e1de8b02c4"
         }
     ],
     "hashType": "sha256"
