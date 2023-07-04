@@ -6,31 +6,6 @@
     "auditLog": "/home/delwar/NextLevel/university-management/logs/winston/errors/.55448e55647f48ad379dc5bd3cdd6bdba43cdb01-audit.json",
     "files": [
         {
-            "date": 1687111005618,
-            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-18-23-error.log",
-            "hash": "37fa82d5a950adfbc73c8b008ff9d1610575ed7da0c9431980f2e2848313da53"
-        },
-        {
-            "date": 1687111287834,
-            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-19-00-error.log",
-            "hash": "02c3ca2995d1498586419e60ca56057733a5f1ec05f6461b4d8096da16ed8d15"
-        },
-        {
-            "date": 1687115538797,
-            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-19-01-error.log",
-            "hash": "35dca25c023941d02ee8ef457b842eeca1486ebcc6b53a0bbe7e5fcf89a401f0"
-        },
-        {
-            "date": 1687119669185,
-            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-19-02-error.log",
-            "hash": "8b55755f4dd0dc37e8b5913608487c691550c772c95acdc865807c1e01256b39"
-        },
-        {
-            "date": 1687122380472,
-            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-19-03-error.log",
-            "hash": "06f30175c2b3e5153fee8959cd8f6d00a826bb9f5796afa3a1f7ff372f29ba3f"
-        },
-        {
             "date": 1687531607503,
             "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-23-20-error.log",
             "hash": "8996c74cbf36daf11fe3bf66fe1463cc23c1aafa5c2ea6716b10ad8fdec46b05"
@@ -89,6 +64,21 @@
             "date": 1687734278164,
             "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-06-26-05-error.log",
             "hash": "b6cd7135f2a89fa7c6e0a4df61de34b0b563925e1cabf634e260d7e1de8b02c4"
+        },
+        {
+            "date": 1688482586380,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-07-04-20-error.log",
+            "hash": "0b660c449dbd9eb19835c7605c410f069d7a0e3c2d613832395894f08d2bb129"
+        },
+        {
+            "date": 1688483967699,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-07-04-21-error.log",
+            "hash": "165d71dee7f09af0ad2ad335778e97b419cef135710f4d1d327c8ef78a7eb565"
+        },
+        {
+            "date": 1688488400367,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/errors/phu-2023-07-04-22-error.log",
+            "hash": "0347c0868772489cef0ee4ca3aee028b11154e3efd8f58a7bb79c97b6229b6e8"
         }
     ],
     "hashType": "sha256"

@@ -1,9 +1,9 @@
 import httpStatus from 'http-status'
-import sendResponse from '../../../shared/sendResponse'
+import sendResponse from '../../shared/sendResponse'
 import { AcademicFacultyService } from './academicFaculty.service'
 import { Request, Response } from 'express'
-import catchAsync from '../../../shared/cachtAsynch'
-import pick from '../../../shared/pick'
+import catchAsync from '../../shared/cachtAsynch'
+import pick from '../../shared/pick'
 import { paginationFields } from '../../../constants/pagination'
 import { facultyFilterableFields } from './academicFaculty.constant'
 

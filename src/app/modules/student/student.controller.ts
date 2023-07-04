@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
-import catchAsync from '../../../shared/cachtAsynch'
-import sendResponse from '../../../shared/sendResponse'
+import catchAsync from '../../shared/cachtAsynch'
+import sendResponse from '../../shared/sendResponse'
 import httpStatus from 'http-status'
 import { StudentService } from './student.service'
 
