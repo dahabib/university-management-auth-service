@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { userRoles } from './user.constant'
-import { IUser, IUserMethods, UserModel } from './user.interface'
+import { IUser, UserModel } from './user.interface'
 import { Schema, model } from 'mongoose'
 import bcrypt from 'bcrypt'
 import config from '../../../config'
 
-const userSchema = new Schema<IUser, Record<string, never>, IUserMethods>(
+const userSchema = new Schema<IUser, UserModel>(
   {
     id: { type: String, required: true, unique: true },
     role: { type: String, required: true, enum: userRoles },
@@ -27,16 +27,16 @@ const userSchema = new Schema<IUser, Record<string, never>, IUserMethods>(
   }
 )
 
-userSchema.methods.isUserExists = async function (
+userSchema.statics.isUserExists = async function (
   id: string
 ): Promise<Partial<IUser> | null> {
   return await User.findOne(
     { id },
-    { id: 1, password: 1, needToChangePassword: 1 }
+    { id: 1, password: 1, role: 1, needToChangePassword: 1 }
   )
 }
 
-userSchema.methods.isPasswordMatched = async function (
+userSchema.statics.isPasswordMatched = async function (
   givenPassword: string,
   savedPassword: string
 ): Promise<boolean> {

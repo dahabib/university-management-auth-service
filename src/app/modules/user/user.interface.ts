@@ -17,15 +17,25 @@ export type IStudent = {
   password: string
 }
 
-export type IUserMethods = {
-  isUserExists(id: string): Promise<Partial<IUser> | null>
+// export type IUserMethods = {
+//   isUserExists(id: string): Promise<Partial<IUser> | null>
+//   isPasswordMatched(
+//     givenPassword: string,
+//     savedPassword: string
+//   ): Promise<boolean>
+// }
+
+// export type UserModel = Model<IUser, Record<string, unknown>, IUserMethods>
+
+export type UserModel = {
+  isUserExists(
+    id: string
+  ): Promise<Pick<IUser, 'id' | 'password' | 'role' | 'needToChangePassword'>>
   isPasswordMatched(
     givenPassword: string,
     savedPassword: string
   ): Promise<boolean>
-}
-
-export type UserModel = Model<IUser, Record<string, unknown>, IUserMethods>
+} & Model<IUser>
 
 export type IUserFilters = {
   searchTerm?: string

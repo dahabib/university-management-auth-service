@@ -79,6 +79,11 @@
             "date": 1688488400363,
             "name": "/home/delwar/NextLevel/university-management/logs/winston/success/phu-2023-07-04-22-success.log",
             "hash": "168d44a43c08061f9ead4c7a0ff7e8ffcffd0b50dbdf6cbf3caf9fa666cddf2d"
+        },
+        {
+            "date": 1688564782152,
+            "name": "/home/delwar/NextLevel/university-management/logs/winston/success/phu-2023-07-05-19-success.log",
+            "hash": "dab061102a1d0b14f2e4673b6b809b640744661e3534f93ff017f89fe2d2451c"
         }
     ],
     "hashType": "sha256"
