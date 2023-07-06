@@ -4,7 +4,7 @@ import { Model, Types } from 'mongoose'
 export type IUserRole = 'student' | 'faculty' | 'admin'
 
 export type IUser = {
-  id: string | undefined
+  id: string
   role: IUserRole
   password: string
   needToChangePassword: true | false

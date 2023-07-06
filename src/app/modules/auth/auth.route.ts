@@ -11,6 +11,12 @@ router.post(
   AuthController.loginUser
 )
 
+router.post(
+  '/refresh-token',
+  validateRequest(AuthValidation.refreshTokenZodSchema),
+  AuthController.refreshToken
+)
+
 // router.get('/:id', UserController.getSingleUser)
 // router.patch(
 //   '/:id',

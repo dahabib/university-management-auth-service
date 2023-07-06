@@ -1,7 +1,11 @@
 import httpStatus from 'http-status'
 import ApiError from '../../../errors/ApiError'
 import { User } from '../user/user.model'
-import { IUserLogin, IUserLoginResonse } from './auth.interface'
+import {
+  IRefreshTokenResponse,
+  IUserLogin,
+  IUserLoginResonse,
+} from './auth.interface'
 import { Secret } from 'jsonwebtoken'
 import config from '../../../config'
 import { JwtHelpers } from '../../../helpers/jwtHelper'
@@ -27,13 +31,13 @@ const loginUser = async (payload: IUserLogin): Promise<IUserLoginResonse> => {
     throw new ApiError(httpStatus.UNAUTHORIZED, 'Password is incorrect!')
   }
 
-  // generate access token & refresh token
-  const acessToken = JwtHelpers.generateToken(
+  // generate access token
+  const accessToken = JwtHelpers.generateToken(
     { userId, role },
     config.jwt.secret as Secret,
     config.jwt.expires_in as string
   )
-
+  // generate  refresh token
   const refreshToken = JwtHelpers.generateToken(
     { userId, role },
     config.jwt.refresh_secret as Secret,
@@ -41,12 +45,46 @@ const loginUser = async (payload: IUserLogin): Promise<IUserLoginResonse> => {
   )
 
   return {
-    acessToken,
+    accessToken,
     refreshToken,
     needToChangePassword,
   }
 }
 
+const refreshToken = async (token: string): Promise<IRefreshTokenResponse> => {
+  let verifiedToken = null
+  //verify refresh token
+  try {
+    verifiedToken = JwtHelpers.verifyToken(
+      token,
+      config.jwt.refresh_secret as string
+    )
+  } catch (err) {
+    throw new ApiError(httpStatus.FORBIDDEN, 'Invalid refresh token')
+  }
+
+  // check if requested user is exists or not
+  const { userId } = verifiedToken
+
+  const isUserExists = await User.isUserExists(userId)
+
+  if (!isUserExists) {
+    throw new ApiError(httpStatus.NOT_FOUND, 'User does not exists.')
+  }
+
+  // generate new access token
+  const newAccessToken = JwtHelpers.generateToken(
+    { id: isUserExists.id, role: isUserExists.role },
+    config.jwt.secret as Secret,
+    config.jwt.expires_in as string
+  )
+
+  return {
+    accessToken: newAccessToken,
+  }
+}
+
 export const AuthService = {
   loginUser,
+  refreshToken,
 }
